@@ -2,7 +2,7 @@
 
 /**
 *print_numbers - print 0123456789
-*Own by James Ekpa
+* owned by Bwave ICT
 *Return: void
 */
 
