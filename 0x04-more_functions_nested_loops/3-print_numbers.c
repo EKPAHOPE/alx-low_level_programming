@@ -2,7 +2,7 @@
 
 /**
 *print_numbers - print 0123456789
-* Owned by James Ekpa
+*Own by James Ekpa
 *Return: void
 */
 
