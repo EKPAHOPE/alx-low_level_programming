@@ -2,7 +2,9 @@
 
 /**
  * print_most_numbers - print 0-9 without 2 and 4
+ *
  *Own by James Ekpa
+ *
  * Return: nothing
  **/
 
