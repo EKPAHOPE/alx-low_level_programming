@@ -24,3 +24,4 @@ void print_number(int n)
 
 	_putchar((x1 % 10) + '0');
 }
+
