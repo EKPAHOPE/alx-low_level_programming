@@ -1,1 +1,1 @@
-Contain ALX Pointer to Pointer Task
+Contain ALX Pointers, arrays and strings
