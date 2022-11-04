@@ -1,47 +1,53 @@
-#include main.h
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * isNotInteger - checks if the argument is integer or not
- * @s: array of character
- * Return: 0 || 1
- */
+ * numchecker - verifies if string has only numbers
+ * @s: string to check
+ * Description: return 1 if only numbers in string, 0 if not
+ * Return: 1 if only numbers, 0 if not
+ **/
 
-int isNotInteger(const char *s)
+int numchecker(char *s)
 {
-	int i = 0;
+	int i;
 
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] < '0' || s[i] > '9')
-			return (1);
-		i++;
+			return (0);
 	}
-	return (0);
+	return (1);
 }
 
 /**
- * main - adds all the given positive numbers
- * @argc: number of argument passed
- * @argv: array to store arguments
- * Return: 0
- */
+ * main - find least amount of coins needed for change
+ * @argc: number of parameters entered
+ * @argv: strings entered including file name
+ * Description: prints the minimum number of coins to make change
+ * Return: zero
+ **/
 
-int main(int argc, char const *argv[])
+int main(int argc, char **argv)
 {
-	int sum = 0;
+	int sum, i;
 
-	while (--argc)
-
+	sum = 0;
+	for (i = 1; i < argc; i++)
 	{
-		if (isNotInteger(argv[argc]))
+		if (numchecker(argv[i]) == 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum += atoi(argv[argc]);
+		if (atoi(argv[i]) <= 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += atoi(argv[i]);
 	}
-	printf("%i\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
